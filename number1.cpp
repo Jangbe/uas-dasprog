@@ -11,33 +11,31 @@ int main(){
 	cout<<"Masukan jumlah kolom : ";
 	cin>>column;
 	
-	int numbers[row][column];
+	int matriks[row][column];
 	for(int i = 0; i < row; i++){
 		for(int a = 0; a < column; a++){
 			cout<<"Masukan angka ("<<i<<"."<<a<<") : ";
-			cin>>numbers[i][a];
+			cin>>matriks[i][a];
 		}
 	}
-	cout<<endl<<"\nSebelum diubah\n";
-	// sebelum diubah
+	cout<<endl<<"\nSebelum diubah : \n";
 	for(int i = 0; i < row; i++){
 		for(int a = 0; a < column; a++){
-			cout<<numbers[i][a]<<"\t";
+			cout<<matriks[i][a]<<"\t";
 		}
 		cout<<endl;
 	}
 	
-	cout<<endl<<"\nSetelah diubah\n";
-	// progoress kolom menjadi baris, dan baris menjadi kolom
-	int numbers2[column][row];
+	cout<<endl<<"\nSetelah diubah (transpose) : \n";
+	int transpose[column][row];
 	for(int i = 0; i < column; i++){
 		for(int a = 0; a < row; a++){
-			numbers2[i][a] = numbers[a][i];
+			transpose[i][a] = matriks[a][i];
 		}
 	}
 	for(int i = 0; i < column; i++){
 		for(int a = 0; a < row; a++){
-			cout<<numbers2[i][a]<<"\t";
+			cout<<transpose[i][a]<<"\t";
 		}
 		cout<<endl;
 	}
